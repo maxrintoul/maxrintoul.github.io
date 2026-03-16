@@ -1,11 +1,11 @@
 # Site settings
-title: Freelancer
-email: your-email@domain.com
-url: https://github.com/jeromelachaud/freelancer-theme
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
-keywords: "your keywords, separated by commas"
-skills: "Web Developer - Graphic Artist - User Experience Designer"
-meta_author: LastName FirstName
+title: Max Rintoul
+email: max.rintoul@utas.edu.au
+url: https://maxrintoul.github.io/
+description: "Max Rintoul - coastal biogeochemist working across coral reefs and sediments, through both models and observations."
+keywords: "biogeochemistry, sediment, coral reefs"
+skills: "Marine Biogeochemist"
+meta_author: Rintoul Max
 
 # Google webmaster tools
 google_verify:
@@ -32,10 +32,10 @@ color:
 
 # Footer settings
 footer:
-  copyright: Dr. Henry Jekyll
+  copyright: Dr. Max Rintoul
   location: Location
   social: Around the Web
-  credits: Credits
+  # credits: Credits
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
