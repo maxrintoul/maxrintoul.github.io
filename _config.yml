@@ -13,20 +13,15 @@ google_verify:
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:
 
-# Contact form:
-# - static : pass through formspree.io to validate email sending
-# - disqus : replace contact form by disqus thread
-# - comment the line below if you want to stick with the default PHP contact form
-contact: static
-
-# If you use disqus you need disqus shortname
-# https://help.disqus.com/customer/portal/articles/466208
-disqus_shortname: myshortname
+# Contact form: create a form at https://formspree.io and paste its ID here
+# (the part after /f/ in the endpoint). While this is empty the contact
+# section shows a plain email link instead of a form.
+formspree_id:
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
   primary: 18bc9c #80B3FF
-  primary-rgb: "24,288,156" #"128,179,255"
+  primary-rgb: "24,188,156" #"128,179,255"
   secondary: 2c3e50 #FD6E8A
   secondary-dark: 233140 #A2122F
 
@@ -34,26 +29,22 @@ color:
 footer:
   copyright: Dr. Max Rintoul
   location: Location
-  social: Around the Web
+  social: Elsewhere
   # credits: Credits
 
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+# Social networks usernames (icons come from Font Awesome brands, e.g. orcid, researchgate, linkedin, google-scholar)
 social:
-  - title: twitter
-    url: http://twitter.com/jekyllrb
-  - title: facebook
-    url:
-  - title: stack-overflow
-    url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: bitbucket
-    url: http://bitbucket.org/jekyll
   - title: github
-    url: http://github.com/jekyll
+    url: https://github.com/maxrintoul
+  # - title: orcid
+  #   url: https://orcid.org/0000-0000-0000-0000
+  # - title: linkedin
+  #   url: https://www.linkedin.com/in/your-name
 
-# Postal address (add as many lines as necessary)
+# Address (add as many lines as necessary)
 address:
-  - line: 3481 Melrose Place
-  - line: Beverly Hills, CA 90210
+  - line: University of Tasmania
+  - line: Tasmania, Australia
 
 # Credits content
 credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
@@ -69,3 +60,19 @@ defaults:
       type: "posts"
     values:
       permalink: ""
+
+# Files Jekyll should not publish
+exclude:
+  - ChatGPT Image*.png
+  - Gemfile
+  - Rakefile
+  - freelancer-theme-jekyll.gemspec
+  - screenshot.png
+  - mail
+  # leftover Freelancer demo posts, safe to delete
+  - _posts/2014-07-13-project-6.markdown
+  - _posts/2014-07-14-project-5.markdown
+  - _posts/2014-07-15-project-4.markdown
+  - _posts/2014-07-16-project-3.markdown
+  - _posts/2014-07-17-project-2.markdown
+  - _posts/2014-07-18-project-1.markdown

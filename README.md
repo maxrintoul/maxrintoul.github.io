@@ -1,32 +1,25 @@
-Freelancer Jekyll theme  
-=========================
+# maxrintoul.github.io
 
-Jekyll theme based on [Freelancer bootstrap theme ](http://startbootstrap.com/template-overviews/freelancer/)
+Personal website of Max Rintoul, a marine biogeochemist. Built with Jekyll (GitHub Pages) on the
+[Freelancer](https://github.com/jeromelachaud/freelancer-theme) Bootstrap theme.
 
-## How to use
- - Place a image in `/img/portfolio/`
- - Replace `your-email@domain.com` in `_config.yml` with your email address. Refer to [formspree](http://formspree.io/) for more information.
- - Create posts to display your projects. Use the follow as an example:
-```txt
----
-layout: default
-modal-id: 1
-date: 2020-01-18
-img: cabin.png
-alt: image-alt
-project-date: January 2020
-client: The Client
-category: Web Development
-description: The description of the project
+## Editing content
 
----
+| What | Where |
+| --- | --- |
+| Name, tagline, email, socials, footer address, contact form ID | `_config.yml` |
+| About text | `_includes/about.html` |
+| Research themes (grid + popups) | `_posts/*.markdown`, images in `img/portfolio/` (900x650) |
+| Publications | `_data/publications.yml` |
+| DEI statement | `_includes/dei.html` |
+| Profile picture | `img/profile.png` |
+
+### Contact form
+Create a form at [formspree.io](https://formspree.io) and set `formspree_id` in `_config.yml`.
+Until then the contact section shows a plain `mailto:` button.
+
+## Running locally
+```sh
+bundle install
+bundle exec jekyll serve
 ```
-
-## Demo
-View this jekyll theme in action [here](https://jeromelachaud.com/freelancer-theme)
-
-## Screenshot
-![screenshot](https://raw.githubusercontent.com/jeromelachaud/freelancer-theme/master/screenshot.png)
-
----------
-For more details, read the [documentation](http://jekyllrb.com/)
