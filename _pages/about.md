@@ -7,9 +7,13 @@ redirect_from:
   - /about.html
 ---
 
-I'm a marine scientist investigating the interactions between marine biogeochemistry and physical oceanography. My primary focus is how these processes interact in coastal environments such as coral reefs and kelp forests.
+I'm a coastal oceanographer at the Institute for Marine and Antarctic Studies (IMAS) at the University of Tasmania. I conduct field work and develop numerical models to investigate how physics and chemistry interact in coastal ecosystems.
 
-I work across coral reefs and sediments, using both numerical models and field observations to understand how carbon and nutrients move through, and are transformed within, coastal ecosystems.
+In my postdoc, I'm trying to identify conditions that maximise the additionality of ocean alkalinity enhancement (OAE). To do this, I've developed both a sediment biogeochemistry model to resolve alkalinity generation within coastal sediments, and a residence-time framework for coastal waters. I combine these two to see how sediment feedbacks reduce the additionality of OAE under different addition rates in different hydrodynamic settings.
+
+I completed my PhD at Scripps Institution of Oceanography, where I combined fieldwork on coral reefs in Okinawa, Hawaiʻi, and Panama with coupled hydrodynamic-biogeochemical models to determine what controlled biogeochemical variability within these reef ecosystems.
+
+I've taught ocean physics, chemistry, and marine biogeochemistry at both undergraduate and postgraduate levels, and am always keen to hear from prospective students and collaborators.
 
 Contact
 ======

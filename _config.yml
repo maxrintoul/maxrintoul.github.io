@@ -23,7 +23,7 @@ repository               : "maxrintoul/maxrintoul.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.jpg"
   name             : "Max Rintoul"
   pronouns         : # example: "she/her"  
   bio              : "Coastal oceanographer and marine biogeochemist looking at how physics and chemistry interact in coral reefs, kelp forests, and coastal environments"
