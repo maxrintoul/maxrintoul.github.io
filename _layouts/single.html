@@ -24,7 +24,8 @@ layout: default
     {% if page.modified %}<meta itemprop="dateModified" content="{{ page.modified | date: "%B %d, %Y" }}">{% endif %}
 
     <div class="page__inner-wrap">
-      {% unless page.header.overlay_color or page.header.overlay_image %}
+      {% assign title_in_hero = false %}{% if page.header.overlay_color or page.header.overlay_image %}{% unless page.header.title_below %}{% assign title_in_hero = true %}{% endunless %}{% endif %}
+      {% unless title_in_hero %}
         <header>
           {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
           {% if page.read_time %}

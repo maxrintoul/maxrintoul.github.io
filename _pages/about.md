@@ -4,7 +4,9 @@ title: "About me"
 author_profile: true
 header:
   overlay_image: header-reef.jpg
-  overlay_filter: 0.3
+  overlay_filter: 0.15
+  overlay_height: 190px
+  title_below: true
 carousel:
   - image: carousel/spur_and_groove.jpg
   - image: carousel/attaching_adcp.jpg
@@ -26,7 +28,6 @@ carousel:
   - image: carousel/sea_snake.jpg
   - image: carousel/fieldwork_prep.jpg
   - image: carousel/scooby_gang.jpg
-  - image: carousel/staying_warm.jpg
 redirect_from:
   - /about/
   - /about.html

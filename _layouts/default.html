@@ -18,7 +18,7 @@ layout: compress
 
     {{ content }}
 
-    <div class="page__footer">
+    <div class="page__footer{% if site.footer.image %} page__footer--photo{% endif %}"{% if site.footer.image %} style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('{{ base_path }}/images/{{ site.footer.image }}');"{% endif %}>
       <footer>
         {% include footer/custom.html %}
         {% include footer.html %}

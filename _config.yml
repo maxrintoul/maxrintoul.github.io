@@ -82,6 +82,12 @@ author:
   youtube          : # Username
   zhihu            : # Username
 
+# Footer
+footer:
+  image: footer-boat.jpg   # in /images/; leave empty for the plain theme footer
+  affiliation: "Institute for Marine and Antarctic Studies, University of Tasmania"
+  acknowledgement: "I acknowledge the muwinina people of nipaluna (Hobart) and the palawa people of lutruwita/Tasmania, the traditional and ongoing custodians of the lands and sea Country on which I live and work. I pay my respects to Elders past and present, and recognise that sovereignty was never ceded."
+
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
   books:

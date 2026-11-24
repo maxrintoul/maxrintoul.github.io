@@ -17,9 +17,8 @@
   /* keep footer in normal document flow so custom widgets do not overlap content */
   height: auto;
 
-  /* keep the footer on the bottom of the page */
-  position: fixed;
-  bottom: 0;
+  /* sit at the end of the page rather than pinned to the bottom of the screen */
+  position: relative;
 
   -webkit-animation: intro 0.3s both;
           animation: intro 0.3s both;
@@ -62,6 +61,48 @@
   .page__footer {
     position: relative;
     bottom: auto;
+  }
+}
+
+.page__footer--photo {
+  background-size: cover;
+  background-position: center 40%;
+  color: #fff;
+  border-top: 0;
+  padding: 3em 0 1.5em;
+
+  .fas,
+  .fab,
+  .ai {
+    color: #fff;
+  }
+}
+
+.page__footer-ack {
+  max-width: 46em;
+  margin-bottom: 1.5em;
+  font-size: $type-size-6;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.page__footer-contact {
+  font-size: $type-size-6;
+  margin-bottom: 1.5em;
+
+  p {
+    margin: 0 0 0.5em;
+  }
+}
+
+.page__footer-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: inline-block;
+    margin-right: 1.25em;
   }
 }
 
