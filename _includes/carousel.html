@@ -1,0 +1,84 @@
+{% comment %}
+  Photo carousel. Add to a page with {% include carousel.html %} and list the
+  photos in that page's front matter:
+
+    carousel:
+      - image: carousel/photo.jpg   # path inside /images/
+        caption: Optional caption
+{% endcomment %}
+{% include base_path %}
+{% assign slides = include.slides | default: page.carousel %}
+<div class="carousel" aria-roledescription="carousel" aria-label="Field work photos">
+  <div class="carousel__track" tabindex="0">
+    {% for slide in slides %}
+    <figure class="carousel__slide" aria-label="{{ forloop.index }} of {{ slides.size }}">
+      <img src="{{ base_path }}/images/{{ slide.image }}" alt="{{ slide.caption | default: 'Field work photo' }}"
+        {% unless forloop.first %}loading="lazy"{% endunless %}>
+      {% if slide.caption %}<figcaption>{{ slide.caption }}</figcaption>{% endif %}
+    </figure>
+    {% endfor %}
+  </div>
+  <button class="carousel__btn carousel__btn--prev" type="button" aria-label="Previous photo">&#8249;</button>
+  <button class="carousel__btn carousel__btn--next" type="button" aria-label="Next photo">&#8250;</button>
+  <div class="carousel__dots">
+    {% for slide in slides %}<button type="button" aria-label="Go to photo {{ forloop.index }}"></button>{% endfor %}
+  </div>
+</div>
+
+<style>
+  .carousel { position: relative; margin: 1.5em 0 2em; }
+  .carousel__track {
+    display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth;
+    border-radius: 6px; background: #1a1a1a; scrollbar-width: none;
+  }
+  .carousel__track::-webkit-scrollbar { display: none; }
+  .carousel__slide {
+    flex: 0 0 100%; margin: 0; scroll-snap-align: center; position: relative;
+    aspect-ratio: 4 / 3; display: flex; align-items: center; justify-content: center;
+  }
+  .carousel__slide img { width: 100%; height: 100%; object-fit: contain; }
+  .carousel__slide figcaption {
+    position: absolute; left: 0; right: 0; bottom: 0; margin: 0; padding: 0.6em 1em;
+    color: #fff; font-size: 0.8em; background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  }
+  .carousel__btn {
+    position: absolute; top: 50%; transform: translateY(-50%); width: 2.2em; height: 2.2em;
+    border: 0; border-radius: 50%; background: rgba(255, 255, 255, 0.8); color: #222;
+    font-size: 1.4em; line-height: 1; cursor: pointer; padding: 0;
+  }
+  .carousel__btn:hover { background: #fff; }
+  .carousel__btn--prev { left: 0.5em; }
+  .carousel__btn--next { right: 0.5em; }
+  .carousel__dots { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 0.75em; }
+  .carousel__dots button {
+    width: 8px; height: 8px; padding: 0; border: 0; border-radius: 50%; background: #ccc; cursor: pointer;
+  }
+  .carousel__dots button[aria-current="true"] { background: #555; }
+  @media (prefers-reduced-motion: reduce) { .carousel__track { scroll-behavior: auto; } }
+</style>
+
+<script>
+  document.querySelectorAll('.carousel').forEach(function (carousel) {
+    var track = carousel.querySelector('.carousel__track');
+    var slides = track.children;
+    var dots = carousel.querySelectorAll('.carousel__dots button');
+    var current = function () { return Math.round(track.scrollLeft / track.clientWidth); };
+    var go = function (i) {
+      var n = slides.length;
+      track.scrollTo({ left: ((i % n + n) % n) * track.clientWidth });
+    };
+    var update = function () {
+      var c = current();
+      dots.forEach(function (d, i) { d.setAttribute('aria-current', i === c ? 'true' : 'false'); });
+    };
+    carousel.querySelector('.carousel__btn--prev').addEventListener('click', function () { go(current() - 1); });
+    carousel.querySelector('.carousel__btn--next').addEventListener('click', function () { go(current() + 1); });
+    dots.forEach(function (d, i) { d.addEventListener('click', function () { go(i); }); });
+    track.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') { e.preventDefault(); go(current() - 1); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); go(current() + 1); }
+    });
+    track.addEventListener('scroll', function () { window.requestAnimationFrame(update); });
+    update();
+  });
+</script>
