@@ -12,7 +12,7 @@ site_theme               : "mint" # The available themes options are "default", 
 title                    : "Max Rintoul"
 title_separator          : "-"
 name                     : &name "Max Rintoul"
-description              : &description "Max Rintoul - coastal biogeochemist working across coral reefs and sediments, through both models and observations."
+description              : &description "Max Rintoul is a coastal oceanographer at IMAS, University of Tasmania, studying how physics and chemistry interact in coral reefs, kelp forests and coasts."
 url                      : https://maxrintoul.github.io # The base hostname & protocol for your site
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"

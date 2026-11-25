@@ -1,6 +1,7 @@
 ---
 permalink: /
 title: "About me"
+seo_title: "Max Rintoul – Coastal Oceanographer, University of Tasmania"
 author_profile: true
 header:
   overlay_image: header-reef.jpg
