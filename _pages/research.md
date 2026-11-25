@@ -9,7 +9,9 @@ My research sits where coastal physics meets chemistry: how water movement, ligh
 
 ## Ocean alkalinity enhancement and coastal sediments
 
-<div class="research-placeholder">Image coming soon</div>
+<figure>
+  <img src="/images/research/sandy-seafloor.jpg" alt="Sunlight rippling across a shallow sandy seafloor beneath a calm sea surface">
+</figure>
 
 Ocean alkalinity enhancement (OAE) aims to increase the ocean's capacity to store carbon dioxide by adding alkalinity to seawater. But coastal sediments already generate alkalinity naturally, through carbonate dissolution, denitrification, anaerobic oxidation and pyrite burial, and they can respond to OAE in ways that offset part of its intended benefit.
 
@@ -52,9 +54,4 @@ My Honours research on One Tree Island, in the southern Great Barrier Reef, show
   .page__content h2 { margin-top: 2em; }
   .page__content figure { margin: 1em 0 1.25em; }
   .page__content figure img { width: 100%; border-radius: 6px; aspect-ratio: 16 / 9; object-fit: cover; }
-  .research-placeholder {
-    display: flex; align-items: center; justify-content: center;
-    aspect-ratio: 16 / 9; margin: 1em 0 1.25em; border-radius: 6px;
-    background: #eef2f3; border: 2px dashed #c5d0d3; color: #7a8a8f; font-style: italic;
-  }
 </style>
