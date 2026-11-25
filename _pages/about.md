@@ -43,7 +43,3 @@ In my postdoc, I'm trying to identify conditions that maximise the additionality
 I completed my PhD at Scripps Institution of Oceanography, where I combined fieldwork on coral reefs in Okinawa, Hawaiʻi, and Panama with coupled hydrodynamic-biogeochemical models to determine what controlled biogeochemical variability within these reef ecosystems.
 
 I've taught ocean physics, chemistry, and marine biogeochemistry at both undergraduate and postgraduate levels, and am always keen to hear from prospective students and collaborators.
-
-Contact
-======
-The best way to reach me is by email at [max.rintoul@utas.edu.au](mailto:max.rintoul@utas.edu.au).

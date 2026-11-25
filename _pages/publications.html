@@ -22,7 +22,22 @@ author_profile: true
 </ul>
 {% endif %}
 
+<h2 id="presentations">Presentations</h2>
+
+{% for group in site.data.presentations %}
+<h3>{% if group[0] == "invited" %}Invited{% else %}Contributed{% endif %}</h3>
+<ul class="publication-list">
+  {% for talk in group[1] %}
+  <li>
+    {{ talk.citation | replace: "Rintoul, M.", "<b>Rintoul, M.</b>" }}
+    {% if talk.note %}<em>{{ talk.note }}.</em>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endfor %}
+
 <style>
   .publication-list li { margin-bottom: 1em; }
   .publication-list a { word-break: break-all; }
+  #presentations { margin-top: 2em; }
 </style>

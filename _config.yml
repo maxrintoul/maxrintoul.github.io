@@ -233,7 +233,7 @@ collections:
     output: true
     permalink: /:collection/:path/
   publications:
-    output: true
+    output: false   # listed on /publications/ only; no individual pages
     permalink: /:collection/:path/
   research:
     output: true
